@@ -155,6 +155,9 @@ def show_exam_result(request, course_id, submission_id):
         result_set.append(question_result)
 
     grade = int(sum(correct_list)/len(correct_list)*100)
+    
+    if grade < 0:
+        grade = 0
 
     context={
         "grade":grade,
