@@ -56,13 +56,13 @@
                     <span    
                     {% if choice in result.selected and choice.correct%}
                     style="color:green">
-                    Correct answer:
+                    <b>Correct answer (+1):</b>
                     {% elif choice not in result.selected and choice.correct%}
                     style="color:rgb(190,190,0)">
-                    Not selected:
+                    <b>Not selected (0):</b>
                     {% elif choice in result.selected and not choice.correct%}
                     style="color:red">
-                    Wrong answer:
+                    <b>Wrong answer (-1):</b>
                     {% else %}
                     >
                     {% endif %}
