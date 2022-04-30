@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r /requirements.txt \
 
 COPY . /usr/src/app
 
-RUN python manage.py collectstatic
+RUN python manage.py collectstatic --noinput
 
 EXPOSE 80
 
